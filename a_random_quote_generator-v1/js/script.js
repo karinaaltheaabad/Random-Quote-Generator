@@ -60,12 +60,13 @@ function getRandomQuote(arr) {
   return arr[randomQuoteIndex];
 }
 
-console.log(quotes);
-console.log(getRandomQuote(quotes));
 /***
  * `printQuote` function
 ***/
-
+function printQuote() {
+  let randomQuote = getRandomQuote(quotes);
+  
+}
 
 
 /***
