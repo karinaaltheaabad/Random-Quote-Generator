@@ -67,6 +67,7 @@ const getRandomQuote = ( arr ) => {
 }
 
 /***
+ * ORIGINAL PRINT QUOTE FUNCTION
  * `printQuote` function prints the random quote 
  * param: none
  * returns: a newly generated HTML text that plugs in whatever properties the object has 
@@ -154,3 +155,4 @@ setInterval( () => {
 	changeBackgroundColor( backgroundColors );
 	printQuote();
 }, 3000);
+
