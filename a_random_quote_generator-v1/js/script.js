@@ -67,34 +67,6 @@ const getRandomQuote = ( arr ) => {
 }
 
 /***
- * ORIGINAL PRINT QUOTE FUNCTION
- * `printQuote` function prints the random quote 
- * param: none
- * returns: a newly generated HTML text that plugs in whatever properties the object has 
- ***/
-// function printQuote() {
-// 	let randomQuote = getRandomQuote( quotes );
-
-//   //source html phrase 
-// 	let quoteView = `<p class=\"quote\"> ${ randomQuote["quote"] } </p> \n<p class=\"source\"> ${ randomQuote["source"] } `;
-
-//   //conditional statement that plugs in HTML from properties of the object (randomQuote) randomly generated 
-//   if ( randomQuote.hasOwnProperty( 'citation' ) === true && randomQuote.hasOwnProperty( 'year' ) === true && randomQuote.hasOwnProperty( 'tags' ) === true ) {
-//     quoteView += `\n\t<span class=\"citation\"> ${ randomQuote["citation"] } </span>\n\t<span class=\"year\"> ${ randomQuote["year"] } </span>\n\t<span class=\"tags\"> ${ randomQuote["tags"] } </span>\n</p>`;
-//   } else if ( randomQuote.hasOwnProperty( 'citation' ) === true && randomQuote.hasOwnProperty( 'year' ) === true ) {
-// 		quoteView += `\n\t<span class=\"citation\"> ${ randomQuote["citation"] } </span>\n\t<span class=\"year\"> ${ randomQuote["year"] } </span>\n</p>`;
-// 	} else if ( randomQuote.hasOwnProperty( 'citation' ) ) {
-// 		quoteView += `\n\t<span class=\"citation\"> ${ randomQuote["citation"] } </span>\n</p>`;
-// 	} else if ( randomQuote.hasOwnProperty( 'year' ) ) {
-// 		quoteView += `\n\t<span class=\"year\"> ${ randomQuote["year"] } </span>\n</p>`;
-// 	} else {
-// 		quoteView += `</p>`
-// 	}
-
-// 	return document.getElementById( 'quote-box' ).innerHTML = quoteView;
-// }
-
-/***
  * CLEANER VERSION OF printQuote FUNCTION
  * `printQuote` function prints the random quote 
  * param: none
@@ -105,8 +77,6 @@ function printQuote() {
 	const hasCitation = randomQuote.hasOwnProperty( 'citation' ); 
 	const hasYear = randomQuote.hasOwnProperty( 'year' );
 	const hasTags = randomQuote.hasOwnProperty( 'tags' );
-
-	console.log( randomQuote ); //for debugging
 	
   	//source html phrase 
 	let quoteView = `<p class=\"quote\"> ${ randomQuote["quote"] } </p> \n<p class=\"source\"> ${ randomQuote["source"] } `;
@@ -125,7 +95,6 @@ function printQuote() {
 
 	quoteView += "\n</p>";
 
-	console.log( quoteView ); //for debugging
 	return document.getElementById( 'quote-box' ).innerHTML = quoteView;
 }
 
